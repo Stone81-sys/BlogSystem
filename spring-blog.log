@@ -1,0 +1,264 @@
+2026-11-16T08:08:50.821+08:00  INFO 40860 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 40860 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T08:08:50.825+08:00  INFO 40860 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T08:08:51.573+08:00  WARN 40860 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T08:08:51.872+08:00  INFO 40860 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T08:08:51.886+08:00  INFO 40860 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T08:08:51.886+08:00  INFO 40860 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T08:08:51.933+08:00  INFO 40860 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1039 ms
+2026-11-16T08:08:52.705+08:00  WARN 40860 --- [BlogsSystem] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+2026-11-16T08:08:52.709+08:00  INFO 40860 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-11-16T08:08:52.726+08:00  INFO 40860 --- [BlogsSystem] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-16T08:08:52.737+08:00 ERROR 40860 --- [BlogsSystem] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.example.blogssystem.BlogsSystemApplication.main(BlogsSystemApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:124) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:95) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:310) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:277) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1054) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:989) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 24 common frames omitted
+
+2026-11-16T08:17:45.150+08:00  INFO 23936 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 23936 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T08:17:45.153+08:00  INFO 23936 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T08:17:45.861+08:00  WARN 23936 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T08:17:46.143+08:00  INFO 23936 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T08:17:46.157+08:00  INFO 23936 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T08:17:46.158+08:00  INFO 23936 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T08:17:46.201+08:00  INFO 23936 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1002 ms
+2026-11-16T08:17:46.815+08:00  WARN 23936 --- [BlogsSystem] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+2026-11-16T08:17:46.818+08:00  INFO 23936 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-11-16T08:17:46.826+08:00  INFO 23936 --- [BlogsSystem] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-16T08:17:46.835+08:00 ERROR 23936 --- [BlogsSystem] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.example.blogssystem.BlogsSystemApplication.main(BlogsSystemApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:124) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:95) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:310) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:277) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1054) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:989) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 24 common frames omitted
+
+2026-11-16T08:32:09.978+08:00  INFO 40128 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 40128 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T08:32:09.988+08:00  INFO 40128 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T08:32:11.584+08:00  WARN 40128 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T08:32:12.200+08:00  INFO 40128 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T08:32:12.226+08:00  INFO 40128 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T08:32:12.227+08:00  INFO 40128 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T08:32:12.316+08:00  INFO 40128 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2204 ms
+2026-11-16T08:32:13.443+08:00  WARN 40128 --- [BlogsSystem] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+2026-11-16T08:32:13.447+08:00  INFO 40128 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-11-16T08:32:13.469+08:00  INFO 40128 --- [BlogsSystem] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-16T08:32:13.491+08:00 ERROR 40128 --- [BlogsSystem] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.example.blogssystem.BlogsSystemApplication.main(BlogsSystemApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:124) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:95) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:310) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:277) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1054) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:989) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 24 common frames omitted
+
+2026-11-16T10:18:58.829+08:00  INFO 20184 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 20184 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T10:18:58.833+08:00  INFO 20184 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T10:18:59.453+08:00  WARN 20184 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T10:18:59.746+08:00  INFO 20184 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T10:18:59.764+08:00  INFO 20184 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T10:18:59.764+08:00  INFO 20184 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T10:18:59.808+08:00  INFO 20184 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 932 ms
+2026-11-16T10:19:00.392+08:00  INFO 20184 --- [BlogsSystem] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@23d1e5d0
+2026-11-16T10:19:00.469+08:00  INFO 20184 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-16T10:19:00.474+08:00  INFO 20184 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Started BlogsSystemApplication in 2.127 seconds (process running for 2.516)
+2026-11-16T10:19:16.955+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T10:19:16.955+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T10:19:16.957+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-16T10:19:17.397+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T10:19:17.583+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76ae5439
+2026-11-16T10:19:17.585+08:00  INFO 20184 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-16T11:32:09.920+08:00  INFO 20184 --- [BlogsSystem] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-16T11:32:09.964+08:00  INFO 20184 --- [BlogsSystem] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-11-16T11:32:09.968+08:00  INFO 20184 --- [BlogsSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-11-16T11:32:09.972+08:00  INFO 20184 --- [BlogsSystem] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-11-16T11:32:14.403+08:00  INFO 29900 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 29900 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T11:32:14.407+08:00  INFO 29900 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T11:32:15.109+08:00  WARN 29900 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T11:32:15.442+08:00  INFO 29900 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T11:32:15.456+08:00  INFO 29900 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T11:32:15.456+08:00  INFO 29900 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T11:32:15.510+08:00  INFO 29900 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1055 ms
+2026-11-16T11:32:16.124+08:00  WARN 29900 --- [BlogsSystem] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+2026-11-16T11:32:16.127+08:00  INFO 29900 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-11-16T11:32:16.136+08:00  INFO 29900 --- [BlogsSystem] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-16T11:32:16.146+08:00 ERROR 29900 --- [BlogsSystem] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/webmvc/autoconfigure/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1358) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1190) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar:7.0.10]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar:4.1.2]
+	at org.example.blogssystem.BlogsSystemApplication.main(BlogsSystemApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception with message: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.10.jar:7.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalStateException: No exception types mapped to public org.example.blogssystem.pojo.response.Result org.example.blogssystem.common.advice.ExceptionAdvice.blogException(org.example.blogssystem.common.Exception.BlogException)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.detectExceptionMappings(ExceptionHandlerMethodResolver.java:124) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:95) ~[spring-web-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:310) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:277) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1054) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:989) ~[spring-webmvc-7.0.10.jar:7.0.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.10.jar:7.0.10]
+	... 24 common frames omitted
+
+2026-11-16T11:34:06.135+08:00  INFO 40528 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Starting BlogsSystemApplication using Java 17.0.9 with PID 40528 (D:\JavaDamo\BlogsSystem\target\classes started by hewan in D:\JavaDamo\BlogsSystem)
+2026-11-16T11:34:06.137+08:00  INFO 40528 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-11-16T11:34:06.650+08:00  WARN 40528 --- [BlogsSystem] [main] o.s.core.annotation.MergedAnnotation     : Failed to introspect meta-annotation @AutoConfigureAfter on class org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration not present
+2026-11-16T11:34:06.974+08:00  INFO 40528 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-16T11:34:06.984+08:00  INFO 40528 --- [BlogsSystem] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-16T11:34:06.984+08:00  INFO 40528 --- [BlogsSystem] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-16T11:34:07.030+08:00  INFO 40528 --- [BlogsSystem] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 851 ms
+2026-11-16T11:34:07.827+08:00  INFO 40528 --- [BlogsSystem] [main] b.m.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@23d1e5d0
+2026-11-16T11:34:07.914+08:00  INFO 40528 --- [BlogsSystem] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-16T11:34:07.920+08:00  INFO 40528 --- [BlogsSystem] [main] o.e.blogssystem.BlogsSystemApplication   : Started BlogsSystemApplication in 2.208 seconds (process running for 2.526)
+2026-11-16T11:34:13.344+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-16T11:34:13.345+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-16T11:34:13.347+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-16T11:34:13.443+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-16T11:34:13.573+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5957b283
+2026-11-16T11:34:13.574+08:00  INFO 40528 --- [BlogsSystem] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
