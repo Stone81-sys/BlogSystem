@@ -16,7 +16,7 @@ public class UserInfo {
 // `create_time` DATETIME DEFAULT now(),
 
     @TableId(value = "id",type = IdType.AUTO)
-    int id;
+    Integer id;
     String userName;
     String password;
     String githubUrl;

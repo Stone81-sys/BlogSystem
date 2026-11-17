@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface BlogInfoList {
     List<BlogInfoResponse> getBlogList();
+
+    BlogInfoResponse searchBlogDetails(int id);
 }

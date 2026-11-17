@@ -7,7 +7,6 @@ import org.example.blogssystem.mapper.BlogMapper;
 import org.example.blogssystem.pojo.dataObject.BlogInfo;
 import org.example.blogssystem.pojo.response.BlogInfoResponse;
 import org.example.blogssystem.service.BlogInfoList;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +25,23 @@ public class BlogInfoImpl implements BlogInfoList {
                 .orderByDesc(BlogInfo::getId)
         );
 
-        return BeanTransfer.BIRList(blogInfoList);
+        List<BlogInfoResponse> blogInfoResponseList=blogInfoList.stream()
+                .map(blogInfo->{
+                    return BeanTransfer.transf(blogInfo);
+                })
+                .collect(Collectors.toList());
+
+        return blogInfoResponseList;
+
+    }
+
+    @Override
+    public BlogInfoResponse searchBlogDetails(int id) {
+        BlogInfo blogInfoList=blogMapper.selectOne(new LambdaQueryWrapper<BlogInfo>()
+                .eq(BlogInfo::getId,id)
+                .eq(BlogInfo::getDeleteFlag,Constants.UNDELETE)
+        );
+        return BeanTransfer.transf(blogInfoList);
     }
 }
 

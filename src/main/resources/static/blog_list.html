@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="right">
-            <div class="blog">
+            <!-- <div class="blog">
                 <div class="title">我的第一篇博客</div>
                 <div class="date">2021-06-02</div>
                 <div class="desc">今天开始, 好好学习Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nesciunt, hic voluptatum, dolorem quisquam modi accusantium, commodi dolores architecto ratione vel exercitationem optio. Facere repellendus autem, obcaecati dolore sequi incidunt?</div>
@@ -48,10 +48,37 @@
                 <div class="date">2021-06-02</div>
                 <div class="desc">今天开始, 好好学习Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nesciunt, hic voluptatum, dolorem quisquam modi accusantium, commodi dolores architecto ratione vel exercitationem optio. Facere repellendus autem, obcaecati dolore sequi incidunt?</div>
                 <a class="detail" href="blog_detail.html">查看全文&gt;&gt;</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/common.js"></script>
+<script>
+    getList();
+    function getList(){
+        $.ajax({
+            type:"get",
+            url:"/blog/getList",
+            success:function(result){
+                if(result!=null&&result.code==200){
+                   let bloglist=result.data;
+                   let finalList=" ";
+                   for(const blogInfo of bloglist){
+                    finalList+='<div class="blog">';
+                    finalList+='<div class="title">'+blogInfo.title+'</div>';
+                    finalList+='<div class="date">'+blogInfo.updateTime+'</div>';
+                    finalList+='<div class="desc">'+blogInfo.content+'</div>';
+                    finalList+='<a class="detail" href="blog_detail.html?id='+blogInfo.id+'">查看全文&gt;&gt;</a>';
+                    finalList+='</div>';
+
+                   }
+                   $(".container .right").html(finalList);
+                }
+            }
+        })
+
+    }
+</script>
+
 </body>
 </html>

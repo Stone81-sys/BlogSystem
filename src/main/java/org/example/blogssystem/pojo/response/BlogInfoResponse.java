@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class BlogInfoResponse {
-    int id;
+    Integer id;
     String title;
     String content;
     Integer deleteFlag;

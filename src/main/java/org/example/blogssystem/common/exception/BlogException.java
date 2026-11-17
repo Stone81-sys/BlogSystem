@@ -1,4 +1,4 @@
-package org.example.blogssystem.common.Exception;
+package org.example.blogssystem.common.exception;
 
 import lombok.Data;
 

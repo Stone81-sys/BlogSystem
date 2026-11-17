@@ -1,9 +1,11 @@
 package org.example.blogssystem.common.advice;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.blogssystem.common.Exception.BlogException;
+import org.example.blogssystem.common.exception.BlogException;
 import org.example.blogssystem.pojo.response.Result;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @Slf4j
@@ -19,7 +21,15 @@ public class ExceptionAdvice {
     /** 兜底：未预期异常，记 error，不把内部细节返回给前端 */
     @ExceptionHandler
     public Result exception(Exception e) {
-        log.error("系统异常", e.getMessage());
+//        log.error("系统异常", e.getMessage());
+        log.error("系统异常", e);
         return Result.fail("系统繁忙，请稍后重试");
+    }
+
+    @ResponseStatus(code= HttpStatus.HTTP_VERSION_NOT_SUPPORTED)
+    @ExceptionHandler
+    public Result nullexception(IllegalStateException e) {
+        log.error("为空", e);
+        return Result.fail("id为空");
     }
 }
