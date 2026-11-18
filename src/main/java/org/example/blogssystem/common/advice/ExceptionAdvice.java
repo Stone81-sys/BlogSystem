@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.blogssystem.common.exception.BlogException;
 import org.example.blogssystem.pojo.response.Result;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -26,11 +27,22 @@ public class ExceptionAdvice {
         return Result.fail("系统繁忙，请稍后重试");
     }
 
-    @ResponseStatus(code= HttpStatus.HTTP_VERSION_NOT_SUPPORTED)
+    @ResponseStatus(code= HttpStatus.BAD_REQUEST)
     @ExceptionHandler
     public Result nullexception(IllegalStateException e) {
         //那个博客注解
         log.error("为空", e);
         return Result.fail("id为空");
+    }
+
+    @ResponseStatus(code= HttpStatus.BAD_REQUEST)
+    @ExceptionHandler
+    public Result blogException(MethodArgumentNotValidException e) {
+        //密码或者用户为空
+        log.warn("业务异常: {}", e.getMessage());
+        //有办法取具体信息
+//        String msg = e.getBindingResult().getFieldError().getDefaultMessage();   // "密码不能为空"
+//        return Result.fail(msg);
+        return Result.fail("啥玩意为空了");
     }
 }
