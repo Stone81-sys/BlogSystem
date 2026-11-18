@@ -29,6 +29,7 @@ public class ExceptionAdvice {
     @ResponseStatus(code= HttpStatus.HTTP_VERSION_NOT_SUPPORTED)
     @ExceptionHandler
     public Result nullexception(IllegalStateException e) {
+        //那个博客注解
         log.error("为空", e);
         return Result.fail("id为空");
     }

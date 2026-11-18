@@ -4,7 +4,7 @@ import org.example.blogssystem.pojo.response.BlogInfoResponse;
 
 import java.util.List;
 
-public interface BlogInfoList {
+public interface BlogInfoService {
     List<BlogInfoResponse> getBlogList();
 
     BlogInfoResponse searchBlogDetails(int id);
