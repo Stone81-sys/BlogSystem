@@ -6,7 +6,7 @@ import org.example.blogssystem.common.utils.BeanTransfer;
 import org.example.blogssystem.mapper.BlogMapper;
 import org.example.blogssystem.pojo.dataObject.BlogInfo;
 import org.example.blogssystem.pojo.response.BlogInfoResponse;
-import org.example.blogssystem.service.BlogInfoService;
+import org.example.blogssystem.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class BlogInfoImpl implements BlogInfoService {
+public class BlogServiceImpl implements BlogService {
     @Autowired
     BlogMapper blogMapper;
 

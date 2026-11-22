@@ -12,3 +12,16 @@ $(document).ajaxSend(function (e, xhr, opt) {
     var user_token = localStorage.getItem("user_token");
     xhr.setRequestHeader("user_token", user_token);
 });
+
+function getUserInfo(userUrl){
+    $.ajax({
+        type:"get",
+        url: userUrl,
+        success:function(result){
+            if(result.code==200 && result.data!=null){
+                $(".left .card h3").text(result.data.userName);
+                $(".left .card a").attr("href",result.data.githubUrl);
+            }
+        }
+    });
+}

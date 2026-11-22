@@ -1,7 +1,9 @@
 package org.example.blogssystem.common.utils;
 
 import org.example.blogssystem.pojo.dataObject.BlogInfo;
+import org.example.blogssystem.pojo.dataObject.UserInfo;
 import org.example.blogssystem.pojo.response.BlogInfoResponse;
+import org.example.blogssystem.pojo.response.UserInfoResponse;
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;
@@ -13,6 +15,12 @@ public class BeanTransfer {
         BlogInfoResponse blogInfoResponse=new BlogInfoResponse();
         BeanUtils.copyProperties(blogInfoList,blogInfoResponse);
         return blogInfoResponse;
+    }
+
+    public static UserInfoResponse transf(UserInfo userInfoList){
+        UserInfoResponse userInfoResponse=new UserInfoResponse();
+        BeanUtils.copyProperties(userInfoList,userInfoResponse);
+        return userInfoResponse;
     }
 //    public static List<BlogInfoResponse> BIRList(List<BlogInfo> blogInfoList){
 //        List<BlogInfoResponse> blogInfoResponseList=blogInfoList.stream()

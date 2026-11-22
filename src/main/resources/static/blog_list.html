@@ -53,7 +53,12 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/common.js"></script>
+    
+
 <script>
+    var userUrl= "/user/getUserInfo";
+    getUserInfo(userUrl);
+    
     getList();
     function getList(){
         $.ajax({
@@ -73,12 +78,13 @@
 
                    }
                    $(".container .right").html(finalList);
-                   //我i很愤怒
+
                 }
             }
         })
 
     }
+
 </script>
 
 </body>

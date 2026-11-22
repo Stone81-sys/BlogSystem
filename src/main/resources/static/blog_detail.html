@@ -59,6 +59,7 @@
     <script src="blog-editormd/lib/prettify.min.js"></script>
     <script src="blog-editormd/editormd.js"></script>
     <script src="js/common.js"></script>
+    
     <script>
         
         //显示博客作者信息
@@ -70,6 +71,9 @@
         }
     </script>
     <script>
+        var userUrl= "/user/getAuthorInfo"+location.search;
+        getUserInfo(userUrl);
+
         getdetails();
         function getdetails(){
             $.ajax({
