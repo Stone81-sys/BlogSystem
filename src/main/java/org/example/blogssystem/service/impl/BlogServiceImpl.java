@@ -5,9 +5,11 @@ import org.example.blogssystem.common.constants.Constants;
 import org.example.blogssystem.common.utils.BeanTransfer;
 import org.example.blogssystem.mapper.BlogMapper;
 import org.example.blogssystem.pojo.dataObject.BlogInfo;
+import org.example.blogssystem.pojo.request.BlogIssueRequest;
 import org.example.blogssystem.pojo.response.BlogInfoResponse;
 import org.example.blogssystem.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,6 +44,18 @@ public class BlogServiceImpl implements BlogService {
                 .eq(BlogInfo::getDeleteFlag,Constants.UNDELETE)
         );
         return BeanTransfer.transf(blogInfoList);
+    }
+
+    @Override
+    public Boolean addBlog(BlogIssueRequest blogIssueRequest) {
+        BlogInfo blogInfo= BeanTransfer.transf(blogIssueRequest);
+        Integer affectRows=blogMapper.insert(blogInfo);
+        if(affectRows==0) {
+            return false;
+        }else if (affectRows!=0){
+            return true;
+        }
+        return false;
     }
 }
 

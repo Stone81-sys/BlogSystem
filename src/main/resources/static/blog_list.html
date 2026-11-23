@@ -24,7 +24,7 @@
         <div class="left">
             <div class="card">
                 <img src="pic/doge.jpg" alt="">
-                <h3>比特汤老师</h3>
+                <h3></h3>
                 <a href="#">GitHub 地址</a>
                 <div class="row">
                     <span>文章</span>
@@ -56,11 +56,13 @@
     
 
 <script>
-    var userUrl= "/user/getUserInfo";
+    var userUrl= "/user/getUserInfo?userId="+localStorage.getItem("loginUserId");
+
     getUserInfo(userUrl);
-    
+
     getList();
     function getList(){
+
         $.ajax({
             type:"get",
             url:"/blog/getList",
@@ -84,7 +86,7 @@
         })
 
     }
-
+    
 </script>
 
 </body>

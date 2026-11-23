@@ -22,13 +22,13 @@ public class UserController {
 
     }
 
-    @PostMapping("/getUserInfo")
+    @GetMapping("/getUserInfo")
     public UserInfoResponse userInfoResponse(Integer userId){
         return userService.getUserInfo(userId);
     }
 
-    @PostMapping("/getAuthorInfo")
-    public  UserInfoResponse userInfoResponseByBlog(Integer blogUserId){
-        return userService.getUserInfoByBlog(blogUserId);
+    @GetMapping("/getAuthorInfo")
+    public  UserInfoResponse userInfoResponseByBlog(Integer id){
+        return userService.getUserInfoByBlog(id);
     }
 }

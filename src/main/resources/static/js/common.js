@@ -25,3 +25,11 @@ function getUserInfo(userUrl){
         }
     });
 }
+
+function logout(){
+    localStorage.removeItem("user_token");
+    localStorage.removeItem("loginUserId");
+    alert("用户已经退出 , 请重新登录");
+    location.href="blog_login.html";
+
+}

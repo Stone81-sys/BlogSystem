@@ -42,7 +42,7 @@
             <div class="content">
                 <div class="title">我的第一篇博客</div>
                 <div class="date">2021-06-02</div>
-                <div class="detail"></div>
+                <div class="detail" id="detail" style="background-color: transparent;"></div>
                 <div class="operating">
                     <button onclick="window.location.href='blog_update.html'">编辑</button>
                     <button onclick="deleteBlog()">删除</button>
@@ -83,8 +83,9 @@
                     if(result!=null&&result.code==200){
                         $(".right .content .title").text(result.data.title);
                         $(".right .content .date").text(result.data.updateTime);
-                        $(".right .content .detail").text(result.data.content);
-
+                        editormd.markdownToHTML("detail", {
+                            markdown: result.data.content,
+                        });
                     }
                 }
             })

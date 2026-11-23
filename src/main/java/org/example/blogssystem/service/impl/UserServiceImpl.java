@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public  UserInfoResponse getUserInfo(Integer userId) {
-        UserInfo userInfo= userMapper.selectById(new LambdaQueryWrapper<UserInfo>()
+        UserInfo userInfo= userMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
                 .eq(UserInfo::getId,userId)
         );
 
@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserInfoResponse getUserInfoByBlog(Integer blogId) {
-        BlogInfo blogInfo=blogMapper.selectById(new LambdaQueryWrapper<BlogInfo>()
+        BlogInfo blogInfo=blogMapper.selectOne(new LambdaQueryWrapper<BlogInfo>()
                 .eq(BlogInfo::getId,blogId)
         );
         if(blogId==null||blogInfo.getUserId()<0){
@@ -72,7 +72,7 @@ public class UserServiceImpl implements UserService {
             return null;
         }
 
-        UserInfo userInfo= userMapper.selectById(new LambdaQueryWrapper<UserInfo>()
+        UserInfo userInfo= userMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
                 .eq(UserInfo::getId,blogInfo.getUserId())
         );
 
