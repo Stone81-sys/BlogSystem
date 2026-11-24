@@ -50,6 +50,8 @@
             </div>
 
         </div>
+
+        
     </div>
 
     <!-- 引入 editor.md 的依赖 -->
@@ -60,16 +62,6 @@
     <script src="blog-editormd/editormd.js"></script>
     <script src="js/common.js"></script>
     
-    <script>
-        
-        //显示博客作者信息
-        //var userUrl = "/user/getAuthorInfo" + location.search;
-        //getUserInfo(userUrl);
-
-        function deleteBlog() {
-            alert("删除博客");
-        }
-    </script>
     <script>
         var userUrl= "/user/getAuthorInfo"+location.search;
         getUserInfo(userUrl);
@@ -90,6 +82,41 @@
                 }
             })
         }
+
+        function deleteBlog(){
+            $.ajax({
+                type:"post",
+                url:"/blog/delete"+location.search,
+                success:function(result){
+                    if(result!=null && result.code==200 && result.data){
+                        alert("删除成功, 即将跳转⾄博客列表⻚");
+                        location.href ="blog_list.html"
+                    }else{
+                        alert("删除失败");
+                    }
+                }
+            });
+        }
+
+        $.ajax({
+            type:"get",
+            url:"/blog/getBlogDetail"+location.search,
+            success:function(result){
+                console.log(result);
+                if(result.code==200 && result.data!=null){
+                //...代码省略 //显⽰更新删除按钮
+                var loginUserId = localStorage.getItem("loginUserId");
+                    if (result.data.userId == loginUserId) {
+                        var html = "";
+                        html += '<div class="operating">';
+                        html += '<button onclick="window.location.href=\'blog_update.html' + location.search + '\'">编辑</button>';
+                        html += '<button onclick="deleteBlog()">删除</button>';
+                        html += '</div>';
+                        $(".content").append(html);
+                    }
+                }
+            }
+        });
     </script>
 </body>
 
