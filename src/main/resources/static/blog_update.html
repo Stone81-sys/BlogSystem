@@ -53,12 +53,14 @@
                     if (result != null && result.code == 200 && result.data == true) {
                         location.href = "blog_list.html";
                     } else {
-                        alert(result.msg);
+                        alert(result.message);
                         return;
                     }
                 }
             });
         }
+
+        getBlogInfo();
 
         function getBlogInfo() {
             $.ajax({
@@ -83,7 +85,6 @@
             });
         }
         
-        getBlogInfo();
     </script>
 </body>
 

@@ -43,10 +43,7 @@
                 <div class="title">我的第一篇博客</div>
                 <div class="date">2021-06-02</div>
                 <div class="detail" id="detail" style="background-color: transparent;"></div>
-                <div class="operating">
-                    <button onclick="window.location.href='blog_update.html'">编辑</button>
-                    <button onclick="deleteBlog()">删除</button>
-                </div>
+                
             </div>
 
         </div>
@@ -69,18 +66,29 @@
         getdetails();
         function getdetails(){
             $.ajax({
-                type:'get',
-                url:'/blog/getBlogDetail'+location.search,
+                type:"get",
+                url:"/blog/getBlogDetail"+location.search,
                 success:function(result){
-                    if(result!=null&&result.code==200){
+                    console.log(result);
+                    if(result.code==200 && result.data!=null){
                         $(".right .content .title").text(result.data.title);
                         $(".right .content .date").text(result.data.updateTime);
                         editormd.markdownToHTML("detail", {
                             markdown: result.data.content,
                         });
+                        //显⽰更新删除按钮
+                        var loginUserId = localStorage.getItem("loginUserId");
+                        if (result.data.userId == loginUserId) {
+                            var html = "";
+                            html += '<div class="operating">';
+                            html += '<button onclick="window.location.href=\'blog_update.html' + location.search + '\'">编辑</button>';
+                            html += '<button onclick="deleteBlog()">删除</button>';
+                            html += '</div>';
+                            $(".content").append(html);
+                        }
                     }
                 }
-            })
+            });
         }
 
         function deleteBlog(){
@@ -98,25 +106,6 @@
             });
         }
 
-        $.ajax({
-            type:"get",
-            url:"/blog/getBlogDetail"+location.search,
-            success:function(result){
-                console.log(result);
-                if(result.code==200 && result.data!=null){
-                //...代码省略 //显⽰更新删除按钮
-                var loginUserId = localStorage.getItem("loginUserId");
-                    if (result.data.userId == loginUserId) {
-                        var html = "";
-                        html += '<div class="operating">';
-                        html += '<button onclick="window.location.href=\'blog_update.html' + location.search + '\'">编辑</button>';
-                        html += '<button onclick="deleteBlog()">删除</button>';
-                        html += '</div>';
-                        $(".content").append(html);
-                    }
-                }
-            }
-        });
     </script>
 </body>
 

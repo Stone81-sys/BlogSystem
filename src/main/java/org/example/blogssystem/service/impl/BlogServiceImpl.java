@@ -49,6 +49,10 @@ public class BlogServiceImpl implements BlogService {
                 .eq(BlogInfo::getId,id)
                 .eq(BlogInfo::getDeleteFlag,Constants.UNDELETE)
         );
+        if(blogInfoList==null){
+            throw new BlogException("博客被删除");
+
+        }
         return BeanTransfer.transf(blogInfoList);
     }
 

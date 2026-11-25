@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 @Data
 public class BlogInfoResponse {
     Integer id;
+    Integer userId;
     String title;
     String content;
     Integer deleteFlag;

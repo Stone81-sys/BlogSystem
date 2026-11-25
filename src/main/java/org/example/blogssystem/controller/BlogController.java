@@ -25,7 +25,7 @@ public class BlogController {
     }
 
     @GetMapping("/getBlogDetail")
-    public BlogInfoResponse searchBlogDetails(@NotNull(message = "不能为空") int id){
+    public BlogInfoResponse searchBlogDetails(@NotNull(message = "不能为空") Integer id){
 
         return blogService.searchBlogDetails(id);
     }
@@ -36,8 +36,8 @@ public class BlogController {
     }
 
     @PostMapping("/delete")
-    public Boolean deleteBlog(Integer blogId){
-        return blogService.deleteBlog(blogId);
+    public Boolean deleteBlog(@NotNull Integer id){
+        return blogService.deleteBlog(id);
     }
 
     @PostMapping("/update")
