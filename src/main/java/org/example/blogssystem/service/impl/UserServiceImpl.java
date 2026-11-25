@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
             throw new BlogException("用户不存在");
         }
 
-        if(Md5Utils.verify(userInfoRequest.getPassword(),userInfo.getPassword())){
+        if(!Md5Utils.verify(userInfoRequest.getPassword(),userInfo.getPassword())){
             throw new BlogException("用户或密码错误");
         }
 
