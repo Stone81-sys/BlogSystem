@@ -5,6 +5,7 @@ import org.example.blogssystem.common.constants.Constants;
 import org.example.blogssystem.common.exception.BlogException;
 import org.example.blogssystem.common.utils.BeanTransfer;
 import org.example.blogssystem.common.utils.JwtUtil;
+import org.example.blogssystem.common.utils.Md5Utils;
 import org.example.blogssystem.mapper.BlogMapper;
 import org.example.blogssystem.mapper.UserMapper;
 import org.example.blogssystem.pojo.dataObject.BlogInfo;
@@ -42,9 +43,11 @@ public class UserServiceImpl implements UserService {
         if(userInfo==null||userInfo.getId()<0){
             throw new BlogException("用户不存在");
         }
-        if(!userInfo.getPassword().equals(userInfoRequest.getPassword())){
+
+        if(Md5Utils.verify(userInfoRequest.getPassword(),userInfo.getPassword())){
             throw new BlogException("用户或密码错误");
         }
+
         Map<String,Object> map=new HashMap<>();
         map.put("id",userInfo.getId());
         map.put("name",userInfo.getUserName());

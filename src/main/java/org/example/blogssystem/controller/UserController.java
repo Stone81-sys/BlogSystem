@@ -1,6 +1,7 @@
 package org.example.blogssystem.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.blogssystem.common.utils.Md5Utils;
 import org.example.blogssystem.pojo.request.UserInfoRequest;
 import org.example.blogssystem.pojo.response.UserInfoResponse;
 import org.example.blogssystem.pojo.response.UserLoginResponse;
